@@ -1,3 +1,11 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%   Alp Sayin - alp_sayin[at]ieee[dot]org
+%   Matlab Genetic Algorithm
+%   Spring 2012
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function iSelected = TournamentSelect( fitnessValues, tournamentSelectionParameter, tournamentSize)
 
 populationSize = size(fitnessValues,1) ;
