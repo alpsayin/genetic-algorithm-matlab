@@ -11,17 +11,17 @@ Replace your own function into EvaluateIndividual.m script. Note that this genet
 
 To Modify Genetic Algorithm Parameters
 --------------------------------------
-All the parameters are located in the FunctionOptimization.m script.
-populationSize -> number of individuals in a population
-numberOfGenes -> number of bits per chromosome
-crossoverProbability -> probability that a crossover will happen between two individuals
-mutationProbability -> probability that a mutation will occur in an individual
-tournamentSelectionParameter -> probability that either the best or the worst of the population will be selected for tournament
-variableRange -> the range in which the genes will be decoded into. basically minimum and maximum values of the parameters
-numberOfGenerations -> number of iterations to run genetic algorithm
-numberOfVariables -> number of variables stored in one chromosome
-tournamentSize -> currently not used. in a different variant of genetic algorithm, this value determines the number of individuals to be mated
-numberOfReplications -> after a generation is run, this number of best individuals are copied back into the population to ensure the solution quality does not degrade
++ All the parameters are located in the FunctionOptimization.m script.
++ populationSize -> number of individuals in a population
++ numberOfGenes -> number of bits per chromosome
++ crossoverProbability -> probability that a crossover will happen between two individuals
++ mutationProbability -> probability that a mutation will occur in an individual
++ tournamentSelectionParameter -> probability that either the best or the worst of the population will be selected for tournament
++ variableRange -> the range in which the genes will be decoded into. basically minimum and maximum values of the parameters
++ numberOfGenerations -> number of iterations to run genetic algorithm
++ numberOfVariables -> number of variables stored in one chromosome
++ tournamentSize -> currently not used. in a different variant of genetic algorithm, this value determines the number of individuals to be mated
++ numberOfReplications -> after a generation is run, this number of best individuals are copied back into the population to ensure the solution quality does not degrade
 
 Licensing Stuff
 ---------------
