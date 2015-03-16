@@ -23,6 +23,10 @@ To Modify Genetic Algorithm Parameters
 + tournamentSize -> currently not used. in a different variant of genetic algorithm, this value determines the number of individuals to be mated
 + numberOfReplications -> after a generation is run, this number of best individuals are copied back into the population to ensure the solution quality does not degrade
 
+Unit Tests
+----------
+They are simply there to test the individual methods/steps of the genetic algorithm. Can be used for debugging.
+
 Licensing Stuff
 ---------------
 Please dont remove my name from the codes.
