@@ -20,7 +20,7 @@ To Modify Genetic Algorithm Parameters
 + variableRange -> the range in which the genes will be decoded into. basically minimum and maximum values of the parameters
 + numberOfGenerations -> number of iterations to run genetic algorithm
 + numberOfVariables -> number of variables stored in one chromosome
-+ tournamentSize -> currently not used. in a different variant of genetic algorithm, this value determines the number of individuals to be mated
++ tournamentSize -> currently not used. in a different variant of genetic algorithm, this value determines the number of individuals to be mated. current implementation only mates the best and the worst individual in population
 + numberOfReplications -> after a generation is run, this number of best individuals are copied back into the population to ensure the solution quality does not degrade
 
 Unit Tests
