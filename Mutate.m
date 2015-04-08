@@ -15,5 +15,8 @@ for j = 1: nGenes
     if (r < mutationProbability)
         mutatedChromosome(j) = 1-chromosome(j);
     end
+    
+    idx = rand(size(Pop2))<mutRate;                 % Index for Mutations
+    Pop2(idx) = Pop2(idx)*-1+1;                     % Bit Flip Occurs
 end
 

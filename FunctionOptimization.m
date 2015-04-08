@@ -6,8 +6,8 @@
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-close all
-
+clear;close all;clc;
+tic
 populationSize = 100 ;
 numberOfGenes = 40;
 crossoverProbability = 0.8 ;
@@ -68,8 +68,11 @@ for iGeneration = 1: numberOfGenerations
             xBest=x ;
         end
     end
+
     
-    maximumFitness, xBest %Printout
+    % Print out
+    disp(maximumFitness);
+    disp(xBest); 
     
     tempPopulation = population;
 
@@ -90,11 +93,8 @@ for iGeneration = 1: numberOfGenerations
         end
     end
 
-    for i=1:populationSize
-        originalChromosome = tempPopulation(i,:);
-        mutatedChromosome = Mutate(originalChromosome,mutationProbability);
-        tempPopulation(i,:) = mutatedChromosome;
-    end
+    idx = rand(size(tempPopulation))<mutationProbability;                 % Index for Mutations
+    tempPopulation(idx) = tempPopulation(idx)*-1+1;                     % Bit Flip Occurs
     
     bestChromosome = population(bestIndividualIndex,:);
     tempPopulation = InsertBestIndividual(tempPopulation, bestChromosome, numberOfReplications);
@@ -108,4 +108,6 @@ for iGeneration = 1: numberOfGenerations
     drawnow;
 end
 
-maximumFitness, xBest
+disp(maximumFitness); 
+disp(xBest);
+toc
