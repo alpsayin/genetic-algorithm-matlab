@@ -11,20 +11,14 @@ function iSelected = TournamentSelect( fitnessValues, tournamentSelectionParamet
 populationSize = size(fitnessValues,1) ;
 
 %select 'tournamentSize' candidates for tournament
-candidates = zeros(1,tournamentSize);
-for k = 1:tournamentSize
-    candidates(k) = 1 + fix(rand*populationSize) ;
-end
-
+candidates = 1 + fix(rand(1,tournamentSize)*populationSize);
+candidateFitnesses = fitnessValues(candidates);
+[~, sortedIndexes] = sort(candidateFitnesses,1,'descend');
+selectionProbabilityMatrix = tournamentSelectionParameter*((1-tournamentSelectionParameter).^(0:tournamentSize-2)');
 r = rand;
-
-if( r < tournamentSelectionParameter)
-    %choose the best individual
-    [bestFitnessValue, bestFitnessIndex] = max(fitnessValues);
-    iSelected = bestFitnessIndex;
+iSelected = candidates(sortedIndexes(r>selectionProbabilityMatrix));
+if isempty(iSelected)
+    iSelected = candidates(sortedIndexes(end));
 else
-    %choose the worst individual
-    [worstFitnessValue, worstFitnessIndex] = min(fitnessValues);
-    iSelected = worstFitnessIndex;
+    iSelected = iSelected(1);
 end
-
