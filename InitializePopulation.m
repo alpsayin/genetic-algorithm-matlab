@@ -8,6 +8,12 @@
 
 function population = InitializePopulation(populationSize, numberOfGenes)
 
+population = (rand(populationSize, numberOfGenes)<0.5).*1;
+
+return
+
+%% DEPRECATED - to be deleted in the next iteration
+
 population = zeros(populationSize, numberOfGenes);
 for ii = 1: populationSize
     for jj = 1: numberOfGenes
