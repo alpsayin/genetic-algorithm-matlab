@@ -16,12 +16,14 @@ To Modify Genetic Algorithm Parameters
 + numberOfGenes -> number of bits per chromosome
 + crossoverProbability -> probability that a crossover will happen between two individuals
 + mutationProbability -> probability that a mutation will occur in an individual
-+ tournamentSelectionParameter -> probability that either the best or the worst of the population will be selected for tournament
++ tournamentSelectionParameter -> parameter that's used to calculate the probabilities for individuals to be chosen in a tournament -> 'p*(1-p)^k' where k denotes the k'th worst individual in the tournament pool
 + variableRange -> the range in which the genes will be decoded into. basically minimum and maximum values of the parameters
 + numberOfGenerations -> number of iterations to run genetic algorithm
 + numberOfVariables -> number of variables stored in one chromosome
-+ tournamentSize -> currently not used. in a different variant of genetic algorithm, this value determines the number of individuals to be mated. current implementation only mates the best and the worst individual in population
++ tournamentSize -> this value determines the number of individuals to be taken into a tournament. an individual of this pool is then chosen for mating with a probability calculated from tournamentSelectionParameter
 + numberOfReplications -> after a generation is run, this number of best individuals are copied back into the population to ensure the solution quality does not degrade
++ verbose -> if true; progress is printed
++ draw_plots -> if true; progress is plotted
 
 Unit Tests
 ----------
