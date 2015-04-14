@@ -15,5 +15,7 @@ population = InitializePopulation(populationSize, numberOfGenes);
 
 for ii=1:populationSize
     subplot(populationSize,1,ii)
-    stem(population(ii,:))
+    bar(population(ii,:))
+    xlabel('Genes')
+    ylabel(sprintf('#%d', ii))
 end
