@@ -14,7 +14,7 @@ tic
 populationSize = 150 ;
 numberOfGenes = 40;
 crossoverProbability = 0.8 ;
-mutationProbability = 0.125;
+mutationProbability = 0.0625;
 tournamentSelectionParameter = 0.5;
 variableRange = 10.0;
 numberOfGenerations = 250;
